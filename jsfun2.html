@@ -1,0 +1,28 @@
+<!-- ### 2.สร้างฟังก์ชั่นรับค่าวันที่แล้วแปลงเป็น วัน เดือน ปี แบบไทย
+
+- 12-05-2023
+- covertDate( "12-05-2023" ) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  </body>
+</html>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction(date1) {
+        var array1 = date1.split("-");
+        var month = ['มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม'];
+        var dd = array1[0];
+        var mm = parseInt(array1[1])-1;
+        var yy = parseInt(array1[2])+543;
+        return dd+month[mm]+yy;
+    }
+
+    let result = myFunction("12-05-2023");
+    document.getElementById("demo").innerHTML = result;
+</script>
