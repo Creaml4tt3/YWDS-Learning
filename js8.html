@@ -1,0 +1,18 @@
+<!-- ### 8.ให้สร้าง Array ของคำนำหน้าชื่อ 3 ชนิด และ Array ของชื่อ 3 ชนิด และนำมารวมกันเป็นชื่อเต็มและแสดงผลลัพธ์
+
+- "Mr.", "Ms.", "Dr."
+- "John", "Jane", "David" -->
+
+<p id="demo"></p>
+<script>
+    const array1 = ["Mr.", "Ms.", "Dr."];
+    const array2 = ["John", "Jane", "David"];
+    const array3 = [];
+    for (let i = 0; i <array1.length;i++){
+        for (let j =0; j<array2.length; j++){
+            array3.push(array1[i]+array2[j])
+        }
+    }
+
+    document.getElementById("demo").innerHTML = array3;
+</script>
