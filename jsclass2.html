@@ -1,0 +1,21 @@
+<!-- ### 2.สร้าง Class ชื่อ Rectangle ที่มี property คือ width และ height และมี method ชื่อว่า getArea() ที่คืนค่าพื้นที่ของสี่เหลี่ยมผืนผ้าเรียกใช้ฟังก์ชั่น getArea()
+
+- Rectangle.getArea() -->
+
+<p id="demo"></p>
+
+<script>
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+
+  }
+  getArea() {
+    return "area: " + this.width * this.height + " sqm.";
+  }
+}
+
+const myRectangle = new Rectangle(2,3);
+document.getElementById("demo").innerHTML = myRectangle.getArea();
+</script>
