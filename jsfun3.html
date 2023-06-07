@@ -1,0 +1,34 @@
+<!-- ### 3.สร้างฟังก์ชั่นรับค่าวันเกิด แล้วให้คำนวณจำนวนวันตั้งแต่วันที่ระบุจนถึงวันที่ปัจจุบัน
+
+- 20-06-2000
+- calulateDays( "20-06-2000" ) -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  </body>
+</html>
+<p id="demo"></p>
+
+<script>
+    function myFunction(date) {
+        var array1 = date.split("-");
+        var dd = parseInt(array1[0]);
+        var mm = parseInt(array1[1]);
+        var yy = parseInt(array1[2]);
+        var date1 = new Date(yy,mm,dd);
+        var date2 = new Date();
+
+
+
+        var timeDiff = date2.getTime() - date1.getTime();
+        //ms/s*h*d
+        var dayDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        return dayDiff+' วัน';
+    }
+
+    let result = myFunction("20-06-2000");
+    document.getElementById("demo").innerHTML = result;
+</script>
