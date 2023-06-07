@@ -1,0 +1,17 @@
+<!-- ### 4.สร้าง array ที่มีชื่อคน 5 คนและแสดงผลชื่อทั้งหมดที่มีตัวอักษร 'a' อยู่ในชื่อ Case Sensitive
+
+- 'John', 'Jane', 'David', 'Alex', 'Marry' -->
+
+<p id="demo"></p>
+<script>
+    const array1 = ['John', 'Jane', 'David', 'Alex', 'Marry'];
+    const array2 = [];
+    for (let i = 0; i < array1.length; i++ ) {
+        if (array1[i].search("a") > 0){
+            array2.push(array1[i])
+        }
+
+    }
+    
+    document.getElementById("demo").innerHTML = array2;
+</script>
