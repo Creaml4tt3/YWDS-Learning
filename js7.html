@@ -1,0 +1,31 @@
+<!-- ### 7.ให้เขียนรับ Array ของตัวเลขเข้ามา และสลับค่าของตำแหน่งแรกและตำแหน่งสุดท้ายใน Array
+
+- 1, 2, 3, 4, 5
+- แสดงค่าทั้ง ก่อนสลับคำ และหลังสลับคำ -->
+
+<form id="myForm" action="">
+    <input type="text" name="aa" id="aa"><br>
+    <input type="button" onclick="myFunction()" value="Submit">
+  </form>
+  
+  <p id="demo"></p>
+  <script>
+    function myFunction() {
+      var aa = document.getElementById("aa").value;
+      var bb = aa.split(",");
+      const array1 = []
+      const array2 = []
+        for (let i =0; i<bb.length; i++){
+        let j = parseInt(bb[i]);
+        array2.push(j);
+        }
+      array1.push(array2[array2.length - 1]);
+      for (let i =1; i<(array2.length-1); i++){
+        array1.push(array2[i]);
+      }
+      array1.push(array2[0]);
+      let str = 'before: '+array2+' after: '+array1;
+      document.getElementById("demo").innerHTML = str;
+    }
+  
+  </script>
