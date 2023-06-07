@@ -1,0 +1,18 @@
+<!-- ### 2.สร้าง array ที่มีตัวเลขเรียงจากน้อยไปมาก 5 ตัว และหาผลรวมของตัวเลขทั้งหมด
+
+- 20, 10, 15, 5, 25 -->
+<a>sort: </a>
+<p id="demo"></p>
+<a>sum: </a>
+<p id="demo2"></p>
+<script>
+    const array1 = [20, 10, 15, 5, 25];
+    array1.sort(function(a, b){return a-b});
+    //ฟังก์ชันเปรียบเทียบค่าในarray a-b น้อยไปมาก b-a มากไปน้อย
+    let sum = 0;
+    for (let i = 0; i < array1.length; i++ ) {
+        sum += array1[i];
+    }
+    document.getElementById("demo").innerHTML = array1;
+    document.getElementById("demo2").innerHTML = sum;
+</script>
