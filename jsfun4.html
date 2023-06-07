@@ -1,0 +1,14 @@
+<!-- ### 4.สร้างฟังก์ชั่นรับชื่อและนามสกุลแล้วทำการแปลงให้ชื่อเป็นตัวพิมพ์ใหญ่ทั้งหมด ส่วนนามสกุลเป็นตัวพิมพ์เล็กทั้งหมด
+
+- Thitipong Manajit
+- changeName( "Thitipong" , "Manajit" ) -->
+<p id="demo"></p>
+
+<script>
+    function myFunction(name, lastname) {
+    return name.toUpperCase()+' '+lastname.toLowerCase();
+    }
+
+    let result = myFunction( "Thitipong" , "Manajit" );
+    document.getElementById("demo").innerHTML = result;
+</script>
