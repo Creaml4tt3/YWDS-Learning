@@ -1,0 +1,41 @@
+<!-- ### 3.สร้าง Class ชื่อ Employee ที่สืบทอดคุณสมบัติจาก Class Person 
+    โดยมี property เพิ่มเติมอีก 2 ตัวคือ position และ salary และมี method ชื่อว่า getSalary() 
+    ที่คืนค่าเงินเดือนของพนักงาน
+
+- Employee.getSalary() -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  </body>
+</html>
+
+<p id="demo"></p>
+
+<script>
+    class Person {
+        constructor(position) {
+          this.position = position;
+        }
+        present() {
+          return this.position;
+        }
+      }
+      
+      class Employee extends Person {
+        constructor(position,salary) {
+            super(position);
+            this.salary = salary;
+        }
+        getSalary() {
+          return this.salary+' บาท';
+        }
+      }
+      
+      let myEmployee = new Employee("Dev", 3000);
+      document.getElementById("demo").innerHTML = myEmployee.getSalary();
+    
+</script>
+
