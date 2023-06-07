@@ -1,0 +1,17 @@
+<!-- ### 5.สร้าง array ที่มีชื่อสินค้า 5 ชื่อและราคาสินค้าที่เก็บไว้ในอาร์เรย์อื่น ๆ และแสดงผลชื่อสินค้าและราคาทั้งหมด
+
+- 'Product A', 'Product B', 'Product C', 'Product D', 'Product E'
+- 10, 20, 30, 40, 50 -->
+
+<p id="demo"></p>
+<script>
+    const product = ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'];
+    const price = [10, 20, 30, 40, 50 ];
+    const array1 = [];
+    for (let i =0; i < product.length; i++ ){
+   
+            let a = product[i]+':'+price[i];
+            array1.push(a);
+    }
+    document.getElementById("demo").innerHTML = array1;
+</script>
